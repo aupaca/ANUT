@@ -62,7 +62,7 @@ void Activity::onSurfaceChanged(int w, int h)
 	glViewport(0, 0, w, h);
 }
 
-void Activity::onProcessApp()
+void Activity::onProcessFrame()
 {
 	
 }

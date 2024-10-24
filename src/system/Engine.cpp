@@ -48,7 +48,7 @@ int Engine::run(Activity* activity)
 		{
 			return exitCode;
 		}
-		userActivity->onProcessApp();
+		userActivity->onProcessFrame();
 	}
 }
 

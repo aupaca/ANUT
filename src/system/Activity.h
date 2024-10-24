@@ -21,7 +21,7 @@ public:
 	virtual void onSurfaceChanged(int w, int h);
 	virtual void onSurfaceDestroyed();
 	
-	virtual void onProcessApp();
+	virtual void onProcessFrame();
 	virtual int onInputEvent(AInputEvent* event);
 	
 	virtual void onGainedFocus();
