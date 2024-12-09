@@ -22,6 +22,6 @@ target_include_directories(anut PRIVATE
 
 target_include_directories(anut INTERFACE
     "${SRC_DIR}/"
-    "${CMAKE_CURRENT_SOURCE_DIR}/include/"
+    "${CMAKE_CURRENT_SOURCE_DIR}/master/"
 )
 
