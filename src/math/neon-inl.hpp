@@ -1,5 +1,7 @@
 #include <arm_neon.h>
 
+// TODO: implement dotVec4 with arm neon
+
 namespace anut
 {
 inline void storeVec4(float* dest, const float* source)

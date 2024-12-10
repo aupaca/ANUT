@@ -43,10 +43,10 @@ int Engine::run(Activity* activity)
 			{
 				source->process(state, source);
 			}
-		}
-		if (state->destroyRequested != 0)
-		{
-			return exitCode;
+			if (state->destroyRequested != 0)
+			{
+				return exitCode;
+			}
 		}
 		userActivity->onProcessFrame();
 	}
