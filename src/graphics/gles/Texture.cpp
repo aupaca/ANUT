@@ -51,7 +51,7 @@ bool Texture::loadFromImage(const char* filename, GLint textureFormat, GLenum im
 	return true;
 }
 
-bool Texture::load(int mipmapLevel, const uint8_t* data, int width, int height, GLint textureFormat, GLenum imageFormat, GLenum dataType)
+bool Texture::load(int mipmapLevel, const void* data, int width, int height, GLint textureFormat, GLenum imageFormat, GLenum dataType)
 {
 	glBindTexture(_type, __handle);
 	glTexImage2D(_type, mipmapLevel, textureFormat, width, height, 0, imageFormat, dataType, data);

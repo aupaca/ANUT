@@ -17,11 +17,13 @@ public:
 	
 	bool init() override;
 	void shutdown() override;
-	int getUniformLocation(const std::string& uniformName);
+	int getUniformLocation(const char* uniformName);
+//	unsigned getUniformBlockIndex(const char* blockName);
 	void use();
 	
 private:
 	std::unordered_map<std::string, int> _uniformCache;
+//	std::unordered_map<std::string, unsigned> _uniformBlockCache;
 };
 
 inline void Shader::use()

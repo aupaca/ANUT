@@ -18,7 +18,7 @@ public:
 	bool init() override;
 	void shutdown() override;
 	bool loadFromImage(const char* filename, GLint textureFormat, GLenum imageFormat);
-	bool load(int mipmapLevel, const uint8_t* data, int width, int height, GLint textureFormat, GLenum imageFormat, GLenum dataType);
+	bool load(int mipmapLevel, const void* data, int width, int height, GLint textureFormat, GLenum imageFormat, GLenum dataType);
 	void setParameter(GLenum textureParam, int value);
 	void generateMipmap();
 	// Call this function after the above functions to avoid a bug

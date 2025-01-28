@@ -64,28 +64,28 @@ void VertexArray::setVertexAttribFrequency(unsigned attribIndex, unsigned diviso
 	glVertexAttribDivisor(attribIndex, divisor);
 }
 
-void VertexArray::draw(GLenum primitive, int vertexCount) const
+void VertexArray::draw(GLenum primitive, int vertexCount, int startIndex) const
 {
 	glBindVertexArray(__handle);
-	glDrawArrays(primitive, 0, vertexCount);
+	glDrawArrays(primitive, startIndex, vertexCount);
 }
 
-void VertexArray::drawIndexed(GLenum primitive, int indexCount, GLenum indexType) const
+void VertexArray::drawIndexed(GLenum primitive, int indexCount, GLenum indexType, int startIndex) const
 {
 	glBindVertexArray(__handle);
-	glDrawElements(primitive, indexCount, indexType, (void*) 0);
+	glDrawElements(primitive, indexCount, indexType, (void*) startIndex);
 }
 
-void VertexArray::drawInstanced(GLenum primitive, int vertexCount, int instanceCount) const
+void VertexArray::drawInstanced(GLenum primitive, int vertexCount, int instanceCount, int startIndex) const
 {
 	glBindVertexArray(__handle);
-	glDrawArraysInstanced(primitive, 0, vertexCount, instanceCount);
+	glDrawArraysInstanced(primitive, startIndex, vertexCount, instanceCount);
 }
 
-void VertexArray::drawIndexedInstanced(GLenum primitive, int indexCount, GLenum indexType, int instanceCount) const
+void VertexArray::drawIndexedInstanced(GLenum primitive, int indexCount, GLenum indexType, int instanceCount, int startIndex) const
 {
 	glBindVertexArray(__handle);
-	glDrawElementsInstanced(primitive, indexCount, indexType, (void*) 0, instanceCount);
+	glDrawElementsInstanced(primitive, indexCount, indexType, (void*) startIndex, instanceCount);
 }
 } // gl namespace
 } // anut namespace

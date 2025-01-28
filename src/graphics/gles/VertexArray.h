@@ -20,10 +20,10 @@ public:
 	void addVertexBuffer(const anut::gl::Buffer& vb, unsigned attribIndex, int subAttribCount, GLenum subAttribType, bool normalized, int stride, int offset);
 	void setIndexBuffer(const anut::gl::Buffer& eb);
 	void setVertexAttribFrequency(unsigned attribIndex, unsigned divisor);
-	void draw(GLenum primitive, int vertexCount) const;
-	void drawIndexed(GLenum primitive, int indexCount, GLenum indexType) const;
-	void drawInstanced(GLenum primitive, int vertexCount, int instanceCount) const;
-	void drawIndexedInstanced(GLenum primitive, int indexCount, GLenum indexType, int instanceCount) const;
+	void draw(GLenum primitive, int vertexCount, int startIndex = 0) const;
+	void drawIndexed(GLenum primitive, int indexCount, GLenum indexType, int startIndex = 0) const;
+	void drawInstanced(GLenum primitive, int vertexCount, int instanceCount, int startIndex = 0) const;
+	void drawIndexedInstanced(GLenum primitive, int indexCount, GLenum indexType, int instanceCount, int startIndex = 0) const;
 };
 } // gl namespace
 } // anut namespace

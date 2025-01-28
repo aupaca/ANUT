@@ -30,7 +30,7 @@ void Shader::shutdown()
 	}
 }
 
-int Shader::getUniformLocation(const std::string& uniformName)
+int Shader::getUniformLocation(const char* uniformName)
 {
 	auto nameAndLocation = _uniformCache.find(uniformName);
 	if (nameAndLocation != _uniformCache.end())
@@ -38,7 +38,7 @@ int Shader::getUniformLocation(const std::string& uniformName)
 		return nameAndLocation->second;
 	}
 	
-	int location = glGetUniformLocation(__handle, uniformName.c_str());
+	int location = glGetUniformLocation(__handle, uniformName);
 	if (location != -1)
 	{
 		_uniformCache[uniformName] = location;
