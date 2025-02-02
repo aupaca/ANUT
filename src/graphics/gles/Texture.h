@@ -1,13 +1,13 @@
 #if not defined(ANUT_TEXTURE_H)
 #define ANUT_TEXTURE_H
-#include "graphics/gles/GpuResource.h"
+#include "graphics/gles/Resource.h"
 #include <GLES3/gl32.h>
 
 namespace anut
 {
 namespace gl 
 {
-class Texture : public anut::gl::GpuResource
+class Texture : public anut::gl::Resource
 {
 public:
 	static void setPixelStorageMode(GLenum storageParam, int value);

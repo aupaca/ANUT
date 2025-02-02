@@ -1,6 +1,6 @@
 #if not defined(ANUT_SHADER_H)
 #define ANUT_SHADER_H
-#include "graphics/gles/GpuResource.h"
+#include "graphics/gles/Resource.h"
 #include <GLES3/gl32.h>
 #include <unordered_map>
 #include <string>
@@ -9,7 +9,7 @@ namespace anut
 {
 namespace gl
 {
-class Shader : public anut::gl::GpuResource
+class Shader : public anut::gl::Resource
 {
 public:
 	Shader();

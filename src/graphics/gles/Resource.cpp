@@ -1,18 +1,18 @@
-#include "graphics/gles/GpuResource.h"
+#include "graphics/gles/Resource.h"
 
 namespace anut
 {
 namespace gl 
 {
-std::list<GpuResource*> GpuResource::allResources{};
+std::list<Resource*> Resource::allResources{};
 
-GpuResource::GpuResource()
+Resource::Resource()
 {
 	allResources.push_back(this);
 	__handle = 0;
 }
 
-GpuResource::~GpuResource()
+Resource::~Resource()
 {
 	allResources.remove(this);
 }

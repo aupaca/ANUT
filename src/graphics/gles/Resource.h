@@ -1,18 +1,18 @@
-#if not defined(ANUT_GPU_RESOURCE_H)
-#define ANUT_GPU_RESOURCE_H
+#if not defined(ANUT_RESOURCE_H)
+#define ANUT_RESOURCE_H
 #include <list>
 
 namespace anut
 {
 namespace gl
 {
-class GpuResource 
+class Resource 
 {
 public:
-	static std::list<GpuResource*> allResources;
+	static std::list<Resource*> allResources;
 	
-	GpuResource();
-	virtual ~GpuResource();
+	Resource();
+	virtual ~Resource();
 	
 	virtual bool init() = 0;
 	virtual void shutdown() = 0;
@@ -23,12 +23,12 @@ protected:
 	unsigned __handle;
 };
 
-inline bool GpuResource::initialized() const
+inline bool Resource::initialized() const
 {
 	return __handle != 0;
 }
 
-inline unsigned GpuResource::getId() const
+inline unsigned Resource::getId() const
 {
 	return __handle;
 }

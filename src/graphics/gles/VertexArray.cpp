@@ -30,7 +30,7 @@ void VertexArray::shutdown()
 	}
 }
 
-void VertexArray::addVertexBuffer(const anut::gl::Buffer& vb, unsigned attribIndex, int subAttribCount, GLenum subAttribType, bool normalized, int stride, int offset)
+void VertexArray::addVertexAttribute(const anut::gl::Buffer& vb, unsigned attribIndex, int subAttribCount, GLenum subAttribType, bool normalized, int stride, int offset)
 {
 	if (vb.getBufferType() != GL_ARRAY_BUFFER)
 	{
